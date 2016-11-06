@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 600px;
+            padding: 10px;
+            background-color: #aaccb4;
+        }
+        .item {
+            width: 100%;
+            margin-bottom: 40px;
+            height: 100px;
+            background-color: #5a9c6b;
+        }
+        .other {
+            background-color: #669a78;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" dropzone="move">
+        <div class="item" ></div>
+        <div class="item"></div>
+        <div class="item" draggable="true"></div>
+    </div>
+    <h1 id="other" class="other" draggable="true">
+        Drag me
+    </h1>
+    <script>
+        var containers = document.getElementsByClassName("container");
+        for(var i = 0; i < containers.length; i++) {
+            drag(containers[i]);
+        }
+
+        function drag(c) {
+            var entered = 0;
+            other.addEventListener("dragstart", function (e) {
+                e.dataTransfer.setData("Text", "Hello");
+                e.dataTransfer.effectAllowed = "copyMove";
+            });
+            c.addEventListener("dragenter", function (e) {
+                console.log(e);
+                e.preventDefault();
+                return false;
+            });
+            c.addEventListener("dragover", function (e) {
+                e.preventDefault();
+                return false;
+            });
+
+            c.ondrop = function (e) {
+                console.log(e.dataTransfer.getData("Text"));
+            }
+        }
+    </script>
+</body>
+</html>

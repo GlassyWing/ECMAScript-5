@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #drop_zone {
+            border: 1px solid blue;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        function drop_handler(ev) {
+            console.log("Drop");
+            ev.preventDefault();
+            var dt = ev.dataTransfer;
+            console.log(dt.types);
+            if(dt.items) {
+                for(var i = 0; i < dt.items.length; i++) {
+                    if(dt.items[i].kind == "file") {
+                        var f = dt.items[i].getAsFile();
+                        console.log("file[" + i + "].name = " + f.name)
+                    }
+                }
+            } else {
+                for(var i = 0; i < dt.files.length; i++) {
+                    console.log("file[" + i + "].name = " + dt.file[i].name);
+                }
+            }
+        }
+        function dragover_handler(ev) {
+            console.log("dragOver");
+            ev.preventDefault();
+        }
+        function dragend_handler(ev) {
+            console.log("dragEnd");
+            var dt = ev.dataTransfer;
+            if(dt.items) {
+                for(var i = 0; i < dt.items.length; i++) {
+                    dt.items.remove(i);
+                }
+            } else {
+                ev.dataTransfer.clearData();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="drop_zone" ondrop="drop_handler(event)" ondragover="dragover_handler(event)" ondragend="dragend_handler(event)">
+        <strong>Drag one or more files to this Drop Zone ...</strong>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../tools.js"></script>
+    <script src="Enclose.js"></script>
+    <script>
+        whenReady(function () {
+            enclose(document.getElementById("content"), 800, 600, -200, -300)
+        })
+    </script>
+    <style>
+        div.enclosure {
+            border: solid black 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img id="content" src="testimage.jpg">
+</body>
+</html>

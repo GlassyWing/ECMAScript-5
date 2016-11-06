@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 id="t" draggable="true">source</h1>
+    <div id="container" style="width: 400px; height: 400px; background-color: #aaa;"></div>
+    <script>
+        var src = document.getElementById("t");
+        var container = document.getElementById("container");
+        src.addEventListener("dragstart", function (e) {
+            console.log(e);
+        });
+        container.addEventListener("dragenter", function (e) {
+            console.log(e);
+        })
+    </script>
+</body>
+</html>

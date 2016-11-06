@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../document.js"></script>
+    <style>
+        #a {
+            position: relative;
+            top: 1200px;
+            left: 800px;
+            width: 100px;
+            height: 100px;
+            background: #000;
+            border: 1px solid #e86d74;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            overflow: scroll;
+        }
+        
+        #b {
+            width: 200px;
+            height: 200px;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body style="width: 1400px; height: 1600px;">
+    <div id="a" style="">
+        <div id="b"></div>
+    </div>
+    <script>
+        console.log(a.getBoundingClientRect());
+        console.log(getElementPos(a));
+        console.log(getElementPosition(a));
+    </script>
+</body>
+</html>

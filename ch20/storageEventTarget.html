@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="file" type="file">
+    <script>
+        var file = document.getElementById('file');
+        file.onchange = function () {
+            console.log(this.files[0]);
+            localStorage.setItem("file", this.files[0]);
+        };
+        console.log(localStorage.getItem("file"));
+        localStorage.clear();
+    </script>
+</body>
+</html>

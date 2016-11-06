@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<audio id="a" src="OP%20「Redo」MV%20short%20ver.mp3" controls></audio>
+<video id="v" src="http://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.mp4" preload="auto" controls></video>
+<script>
+    var v = document.getElementById("v");
+    v.addEventListener('loadedmetadata', function() {
+        this.currentTime = 25;
+        console.log(this.loaded)
+    }, false);
+    v.addEventListener("timeupdate", function () {
+    });
+    v.addEventListener("seeking", function () {
+        console.log(v.currentTime)
+    })
+</script>
+</body>
+</html>

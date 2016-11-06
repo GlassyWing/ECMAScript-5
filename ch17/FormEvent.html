@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <input id="input" type="tel">
+    </form>
+    <script>
+        input.addEventListener("focus", function(){
+            console.log("focus")
+        });
+        input.addEventListener("blur", function () {
+            console.log("blur")
+        })
+    </script>
+</body>
+</html>

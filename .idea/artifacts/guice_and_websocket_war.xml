@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="guice-and-websocket:war">
+    <output-path>$PROJECT_DIR$/../Downloads/code-article2/guice-and-websocket/target</output-path>
+    <root id="archive" name="guice-and-websocket-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="guice-and-websocket:war exploded" />
+    </root>
+  </artifact>
+</component>

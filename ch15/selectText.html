@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form name="deb">
+        <input type="password" name="password">
+    </form>
+    <script>
+        console.log(deb.password.addEventListener("change",function () {
+//            var t = document.selection.createRange().text;
+//            console.log(t);
+            console.log(deb.password.value);
+        }));
+    </script>
+</body>
+</html>

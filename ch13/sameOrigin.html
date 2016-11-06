@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <iframe id="oo" src="https://www.baidu.com"></iframe>
+    <script>
+        document.domain = "localhost";
+        var ifm = document.getElementById("oo");
+        ifm.contentWindow.document.domain = "example.com";
+    </script>
+</body>
+</html>

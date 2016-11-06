@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="a"></div>
+    <script>
+        var request = new XMLHttpRequest();
+        request.open("GET", "./doc.html");
+        request.addEventListener("readystatechange", function (e) {
+            if(request.readyState == 4 && request.status == 200) {
+                a.innerHTML =
+                        request.responseText
+
+            }
+        });
+        request.send(null);
+    </script>
+</body>
+</html>

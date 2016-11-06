@@ -1,0 +1,10 @@
+ browser      event.type           close            away
+
+  IE         mousewheel           -120              120
+  Firefox      wheel                3               -3
+  chrome       wheel            deltaY:100          deltaY:-100
+                            wheeldelta:-120     wheeldelta:120
+  opera        wheel            deltaY:100          deltaY:-100
+                            wheeldelta:-120     wheeldelta:120
+  edge         wheel           deltaY:unkown        deltaY:unkown
+                            wheeldelta:-120     wheeldelta:120

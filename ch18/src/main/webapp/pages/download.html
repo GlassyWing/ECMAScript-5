@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="tools.js"></script>
+    <script>
+        whenReady(function () {
+            var dwnd = document.getElementsByTagName("input");
+            for(var i = 0; i < dwnd.length; i++) {
+                var input = dwnd[i];
+                if(input.type !=="button") continue;
+                var src = input.getAttribute("data-download-src");
+                if(!src) continue;
+                input.onclick = function () {
+                    download(src);
+                };
+
+            }
+
+            function download(src) {
+                var request = new XMLHttpRequest();
+                request.open("GET", src);
+                request.onprogress = function (e) {
+                    console.log(e);
+                };
+                request.send(null);
+            }
+        })
+    </script>
+</head>
+<body>
+    <input type="button" value="Download !" data-download-src="/download">
+</body>
+</html>

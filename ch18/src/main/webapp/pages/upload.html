@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="tools.js"></script>
+    <script src="upload.js"></script>
+    <style>
+        .fileDropTarget {
+            text-align: center;
+            line-height: 1.5em;
+            margin: 0 auto;
+            width: 400px;
+            height: 400px;
+            background-color: #efefef;
+            border-radius: 10px;
+            -webkit-box-shadow:  2px 2px 4px #ccc;
+            -moz-box-shadow:  2px 2px 4px #ccc;
+            box-shadow:  2px 2px 4px #ccc;
+        }
+        .wantdrop {
+            border: #23bb2b 5px solid;
+        }
+        .uploading {
+            animation: upload 2s ease-in;
+            animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate;
+            -moz-animation-direction: alternate;
+            -o-animation-direction: alternate;
+            animation-direction: alternate;
+        }
+        @keyframes upload {
+            0% {
+                border: #f3f5f1 5px solid;
+            }
+            100% {
+                border: #7dbb7c 5px solid;
+                -webkit-box-shadow:  2px 2px 4px #b5ccb7;
+                -moz-box-shadow:  2px 2px 4px #b5ccb7;
+                box-shadow:  2px 2px 4px #b5ccb7;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fileDropTarget" data-uploadto="/upload">
+
+    </div>
+</body>
+</html>

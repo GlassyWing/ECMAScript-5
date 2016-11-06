@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="a" aria-disabled="true"></div>
+    <script>
+        var $a = a;
+        $a.setAttribute("fly", JSON.stringify({i:4}));
+        console.log(JSON.parse($a.getAttribute("fly")));
+        console.log($a.getAttribute("aria-disabled"));
+    </script>
+</body>
+</html>

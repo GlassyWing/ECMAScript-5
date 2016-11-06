@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Keymap.js"></script>
+</head>
+<body>
+    <input id="a" type="text">
+    <script>
+        var eltA = document.getElementById("a");
+        eltA.addEventListener("keydown", function (e) {
+            console.log(e);
+        })
+    </script>
+</body>
+</html>

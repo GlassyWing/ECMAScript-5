@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script src="E01_Location.js"></script>-->
+    <!--<script src="E02_LocationMethods.js"></script>-->
+    <!--<script src="E03_History.js"></script>-->
+    <!--<script src="E04_Navigator.js"></script>-->
+    <!--<script src="E05_Dialog.js"></script>-->
+    <!--<script src="E06_ShowDialog.js"></script>-->
+    <!--<script src="E07_Window.js"></script>-->
+</head>
+<body>
+    <iframe id="a" name="aw" src="iframe.html"></iframe>
+    <script>
+        console.log(aw.frameElement == a);
+        console.log(frames[0] === window[0]);
+        console.log(parent == self);
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../document.js"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+        .outer {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            background: #caa;
+        }
+
+        .content {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            background: #eaa;
+        }
+
+        #b {
+            top: -10px;
+            left: -10px;
+        }
+
+        #c {
+            overflow: scroll;
+        }
+
+        #d {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="a" class="outer">
+        <div id="b" class="content"></div>
+    </div>
+    <h1>SCROLL</h1>
+    <div id="c" class="outer">
+        <div id="d" class="content"></div>
+    </div>
+    <script>
+        console.log(b.offsetLeft, b.offsetTop);
+        console.log(c.offsetLeft, c.offsetTop);
+    </script>
+</body>
+</html>

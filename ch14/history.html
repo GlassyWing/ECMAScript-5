@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="forward" type="button" value="forward">
+<input id="back" type="button" value="back">
+<iframe src="http://www.baidu.com"></iframe>
+
+<script>
+    document.getElementById("back").addEventListener("click", function () {
+        history.back();
+    });
+    document.getElementById("forward").addEventListener("click", function () {
+        history.forward();
+    });
+</script>
+</body>
+</html>
